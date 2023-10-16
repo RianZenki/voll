@@ -21,11 +21,16 @@ export const Avaliacao = ({
 	return (
 		<>
 			<SecaoCard>
-				{profissionais?.map((profissional) => (
-					<Card profissional={profissional} />
-				))}
+				{profissionais && profissionais.length
+					? profissionais?.map((profissional) => (
+							<Card profissional={profissional} />
+					  ))
+					: "Não há avalicações para mostrar"}
 			</SecaoCard>
-			<Botao>Ver mais</Botao>
+
+			{profissionais && profissionais.length ? (
+				<Botao>Ver mais</Botao>
+			) : null}
 		</>
 	);
 };
