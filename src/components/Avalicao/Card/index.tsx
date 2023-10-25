@@ -51,7 +51,7 @@ const ParagrafoEstilizado = styled.p`
 `;
 
 export const Card = ({ profissional }: { profissional: IProfissional }) => {
-	const { nome, imagem, especialidade, nota } = profissional;
+	const { nome, imagem, especialidade } = profissional;
 
 	return (
 		<ContainerEstilizado>
@@ -67,7 +67,7 @@ export const Card = ({ profissional }: { profissional: IProfissional }) => {
 					<ParagrafoEstilizado>{especialidade}</ParagrafoEstilizado>
 				</ItemListaEstilizado>
 				<li>
-					<Rating name="simple-controlled" value={nota} readOnly />
+					<Rating name="simple-controlled" value={3} readOnly />
 				</li>
 			</ListaEstilizada>
 		</ContainerEstilizado>
